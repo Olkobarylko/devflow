@@ -60,12 +60,15 @@
     padding: 40px 160px;
     text-align: center;
     &__title {
+        max-width: 920px;
         @include white-title;
+        margin: 0px auto;
     }
 
     &__subtitle {
+        max-width: 920px;
         @include white-text;
-        margin: 50px 0px;
+        margin: 50px auto;
         line-height: 30px;
 
         &_link {
@@ -123,6 +126,44 @@
         }
     }
 }
+
+.list_images {
+    padding: 50px 20px 150px;
+    max-width: 970px;
+    margin: 0px auto;
+    &__title {
+        @include white-title;
+    }
+    &__subtitle {
+        @include white-text;
+        margin: 50px 0px 80px;
+    }
+    &__icon.ucu {
+        filter: invert(100%); 
+        fill: $white;
+    }
+    &__icons {
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center
+    }
+}
+
+.showcase {
+    padding: 0px 20px;
+    &__title {
+        @include white-title;
+    }
+    &__subtitle {
+        @include white-text;
+        max-width: 800px;
+        margin: 50px auto 80px;
+    }
+}
+
 @media screen and (max-width: 1250px) {
     .hero, .list {
         padding: 100px 3vw;
