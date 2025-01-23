@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("../../../public/fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+$font: 'Roboto';
+$white: #FFFFFF;
+$yellow: #FACC15;
+$black: #000000E6;
+$gray: #A3A3A3;
+$breakpoints: (
+  'mobile': '540px',
+  'tablet': '980px',
+  'desktop': '1600px'
+);

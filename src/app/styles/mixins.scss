@@ -1,0 +1,22 @@
+@use './variables.scss' as *;
+
+@mixin white-text {
+    font-family: $font;
+    font-size: 18px;
+    color: $white;
+    text-align: center;
+}
+@mixin white-title {
+    font-size: 30px;
+    font-family: $font;
+    color: $white;
+    text-align: center;
+}
+@mixin button {
+    font-family: $font;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $black;
+    padding: 12px 20px;
+    border-radius: 50px;
+}

@@ -1,0 +1,147 @@
+@use './styles/variables.scss' as *;
+@use './styles/mixins.scss' as *;
+
+.hero {
+    padding: 140px 160px;
+
+    &__title {
+        max-width: 600px;
+        font-family: $font;
+        font-size: 48px;
+        color: $white;
+        text-align: center;
+        margin: 30px 0px;
+        margin: 0px auto;
+    }
+
+    &__subtitle {
+        max-width: 920px;
+        @include white-text;
+        margin: 20px auto;
+        // margin: 20px;
+
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+    }
+
+    &__btn {
+        &_white {
+            @include button;
+            background: $white;
+            margin: 0px 15px;
+            &:hover {
+                background: #f3f4f6
+            }
+        }
+
+        &_yellow {
+            @include button;
+            background: $yellow;
+            margin: 0px 15px;
+            &:hover {
+                background: #ebb305;
+            }
+        }
+        
+
+        &_icon {
+            width: 10px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+}
+
+.list {
+    padding: 40px 160px;
+    text-align: center;
+    &__title {
+        @include white-title;
+    }
+
+    &__subtitle {
+        @include white-text;
+        margin: 50px 0px;
+        line-height: 30px;
+
+        &_link {
+            color: $yellow;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 7vw;
+
+    }
+    &__decor {
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background: $white;
+        left: 0;
+        top: calc(50% - 1px);
+        transition: width 0.3s ease;
+    }
+    &__col {
+        text-align: left;
+
+        &_title {
+            font-family: $font;
+            font-size: 24px;
+            color: $white;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ffffff26;
+            margin: 20px 0px;
+            text-align: left;
+        }
+        &_item {
+            position: relative;
+            @include white-text;
+            padding-left: 40px;
+            &:hover .list__decor {
+                width: 26px;  // Збільшення ширини на 10px
+            }
+        }
+
+        li {
+            margin: 10px 0px;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        @include button;
+        background: $white;
+        margin: 80px 0px;
+        &:hover {
+            background: #f3f4f6
+        }
+    }
+}
+@media screen and (max-width: 1250px) {
+    .hero, .list {
+        padding: 100px 3vw;
+    }
+}
+@media screen and (max-width: map-get($breakpoints, 'tablet')) {
+    .hero, .list {
+        padding: 60px 20px;
+    }
+    .list__items {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'mobile')) {
+    .hero__btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
