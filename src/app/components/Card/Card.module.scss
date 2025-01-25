@@ -1,0 +1,77 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.card {
+    background: $white;
+    width: 100%;
+    height: 290px;
+    padding: 25px 25px 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &__title {
+        font-family: $font;
+        font-size: 24px;
+        color: black;
+    }
+    &__text {
+        font-family: $font;
+        font-size: 16px;
+        color: black;
+        margin: 20px 0px 40px;
+        line-height: 130%;
+    }
+    &__btns {
+        display: flex ;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    &__btn {
+        &_yellow {
+            position: relative;
+            display: inline-block;
+            font-family: $font;
+            font-size: 15px;
+            color: black;
+            padding: 8px 12px;
+            border: 1px solid black;
+            background: none;
+            z-index: 1;
+            text-transform: uppercase;
+            &::before {
+                position: absolute;
+                content: ''; 
+                height: 100%;
+                width: 100%;
+                background-color: $yellow;
+                z-index: -1;
+                opacity: 0.6;
+                top: -5px;
+                right: -5px;
+            }
+            &:hover {
+                &::before {
+                    top: 0px;
+                    right: 0px;
+                }
+            }
+        }
+        &_white {
+            display: inline-block;
+            font-family: $font;
+            font-size: 16px;
+            color: black;
+            padding: 7px 12px;
+            color: black;
+            border-bottom: 2px solid rgba(168, 168, 168, 0.393);
+            &:hover {
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+}

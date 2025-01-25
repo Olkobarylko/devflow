@@ -203,16 +203,19 @@ export default function Home() {
             title={`Мультимедійна онлайн-платформа "Локальна історія"`}
             subtitle={`Розробка та редизайн сайту`}
             img={local_img}
+            reverse={false}
           />
           <WorkCard
             title={`Бренд одягу "Boichuk"`}
             subtitle={`Розробка стилю та веб-сайту для бренду Boichuk`}
             img={boichuk}
+            reverse={true}
           />
           <WorkCard
             title={`Футбольний клуб "Карпати Львів"`}
             subtitle={`Розробка сайту футбольного клубу`}
             img={fckarpaty}
+            reverse={false}
           />
         </div>
         <Link href='/' className={styles.showcase__btn}>Переглянути всі проєкти <FontAwesomeIcon

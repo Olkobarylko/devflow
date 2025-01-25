@@ -170,6 +170,9 @@
         @include button;
         background: $white;
         margin: 50px auto;
+        &:hover {
+            background: #f3f4f6;
+        }
     }
 }
 

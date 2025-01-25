@@ -14,26 +14,27 @@ export default function Header() {
   //   if (menuOpen) {
   //     body.classList.add('menu-open');
   //     console.log(body.classList);
-      
+
   //   } else {
   //     body.classList.remove('menu-open');
   //   }
-  
+
   //   return () => {
   //     body.classList.remove('menu-open');
   //   };
   // }, [menuOpen]);
-  
 
   return (
     <div className={styles.header__container}>
       <nav className={styles.header__nav}>
-        <Image src={logo} alt="logo" className={styles.header__logo} />
+        <Link href="/">
+          <Image src={logo} alt="logo" className={styles.header__logo} />
+        </Link>
         <ul
           className={`${styles.header__items} ${menuOpen ? styles.active : ""}`}
         >
           <li className={styles.header__item}>
-            <Link className={styles.header__link} href="/">
+            <Link className={styles.header__link} href="/portfolio">
               Портфоліо
             </Link>
           </li>

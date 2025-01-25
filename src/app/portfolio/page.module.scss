@@ -1,0 +1,40 @@
+@use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
+
+.showcase {
+    padding: 50px 20px;
+
+    &__title {
+        font-family: $font;
+        font-size: 36px;
+        color: $white;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include white-text;
+        margin: 20px auto 80px;
+        max-width: 670px;
+        line-height: 150%;
+    }
+
+}
+
+.list {
+    margin: 50px auto;
+    &__title {
+        font-family: $font;
+        font-size: 34px;
+        color: $white;
+        text-align: center;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+    &__items {
+        max-width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
