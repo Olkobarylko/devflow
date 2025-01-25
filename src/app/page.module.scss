@@ -153,7 +153,10 @@
 }
 
 .showcase {
+    margin: 50px auto;
+    position: relative;
     padding: 0px 20px;
+    text-align: center;
     &__title {
         @include white-title;
     }
@@ -161,6 +164,12 @@
         @include white-text;
         max-width: 800px;
         margin: 50px auto 80px;
+    }
+    &__btn {
+        display: inline-block;
+        @include button;
+        background: $white;
+        margin: 50px auto;
     }
 }
 

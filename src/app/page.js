@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Link from "next/link";
@@ -13,8 +14,10 @@ import WorkCard from "./components/WorkCard/WorkCard";
 import boichuk from "../../public/images/boichuk.png";
 import fckarpaty from "../../public/images/karpaty.png";
 import local_img from "../../public/images/local-img.png";
+import React, { useEffect } from "react";
 
 export default function Home() {
+
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
@@ -140,7 +143,7 @@ export default function Home() {
           </li>
         </ul>
         <Link href="/" className={styles.list__btn}>
-          Переглянути всі послуги{" "}
+          Переглянути всі послуги
           <FontAwesomeIcon
             className={styles.hero__btn_icon}
             icon={faArrowRight}
@@ -188,28 +191,35 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="showcase">
+      <section className={styles.showcase}>
         <h2 className={styles.showcase__title}>Наші роботи</h2>
         <p className={styles.showcase__subtitle}>
           Кожен проект відображає нашу професійність, творчий підхід та
           прагнення до найкращих результатів. Ознайомтеся з нашим портфоліо, щоб
           отримати візуальне враження від нашої роботи та можливостей.
         </p>
-        <WorkCard
-          title={`Мультимедійна онлайн-платформа "Локальна історія"`}
-          subtitle={`Розробка та редизайн сайту`}
-          img={local_img}
-        />
-        <WorkCard
-          title={`Бренд одягу "Boichuk"`}
-          subtitle={`Розробка стилю та веб-сайту для бренду Boichuk`}
-          img={boichuk}
-        />
-        <WorkCard
-          title={`Футбольний клуб "Карпати Львів"`}
-          subtitle={`Розробка сайту футбольного клубу`}
-          img={fckarpaty}
-        />
+        <div className={styles.showcase__cards}>
+          <WorkCard
+            title={`Мультимедійна онлайн-платформа "Локальна історія"`}
+            subtitle={`Розробка та редизайн сайту`}
+            img={local_img}
+          />
+          <WorkCard
+            title={`Бренд одягу "Boichuk"`}
+            subtitle={`Розробка стилю та веб-сайту для бренду Boichuk`}
+            img={boichuk}
+          />
+          <WorkCard
+            title={`Футбольний клуб "Карпати Львів"`}
+            subtitle={`Розробка сайту футбольного клубу`}
+            img={fckarpaty}
+          />
+        </div>
+        <Link href='/' className={styles.showcase__btn}>Переглянути всі проєкти <FontAwesomeIcon
+            className={styles.hero__btn_icon}
+            icon={faArrowRight}
+          />
+        </Link>
       </section>
     </div>
   );

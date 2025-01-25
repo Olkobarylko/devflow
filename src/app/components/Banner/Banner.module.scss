@@ -1,0 +1,44 @@
+@use '../../styles/variables.scss' as *;
+
+.banner {
+    text-align: center;
+    margin: 30px 0px;
+
+    &__title {
+        font-family: $font;
+        font-size: 48px;
+        color: $white;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin: 40px auto;
+    }
+
+    &__contact {
+        font-family: $font;
+        font-size: 24px;
+        color: $white;
+        padding-bottom: 10px;
+        transition: border-bottom 0.3s ease;
+
+        &:hover {
+            border-bottom: 2px solid $white;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'tablet')) {
+    .banner {
+        padding: 0px 20px;
+        &__title {
+            font-size: 43px;
+        }
+        &__contacts {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}

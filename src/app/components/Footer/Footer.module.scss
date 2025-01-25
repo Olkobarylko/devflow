@@ -1,0 +1,70 @@
+@use '../../styles/variables.scss' as *;
+.footer {
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0px auto;
+    border-top: 1px solid rgba(128, 128, 128, 0.516);
+    &__logo {
+        max-width: 260px;
+        width: 100%;
+        filter: invert(100%); 
+        fill: $white;
+    }
+    &__text {
+        font-family: $font;
+        color: $white;
+        font-size: 14px;
+        margin: 25px 0px;
+        line-height: 20px;
+    }
+    &__col_title {
+        font-family: $font;
+        font-size: 16px;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    &__cols {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    &__text {
+        max-width: 450px;
+    }
+    &__items {
+        margin-top: 20px;
+    }
+    &__item {
+        margin: 9px 0px;
+        padding: 4px 0px;
+        transition: border-bottom 0.3s ease;
+        border-bottom: 1px solid #000;
+
+        &:hover {
+            border-bottom: 1px solid $white;
+        }
+    }
+    &__link {
+        font-family: $font;
+        font-size: 16px;
+        color: $white;
+    }
+    &__icon {
+        margin-right: 10px;
+    }
+    &__author {
+        font-family: $font;
+        font-size: 16px;
+        color: $white;
+        text-align: center;
+        margin: 70px auto 0px;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'tablet')) {
+    .footer__cols {
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+}
