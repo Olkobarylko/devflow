@@ -1,10 +1,39 @@
 @use '../../styles/variables.scss' as *;
 @use '../../styles/mixins.scss' as *;
-.header {
+.header { 
     &__container {
         padding: 32px 80px;
         max-width: 1400px;
         margin: 0px auto;
+    }
+    &.light {
+        background: $white;
+        .header__link {
+            color: #171717;
+        }
+        .header__logo {
+            fill: black;
+        }
+        .header__btn_lang {
+            background: $white;
+        }
+
+    }
+    &.dark {
+        background: black;
+        .header__link {
+            color: $gray;
+        }
+        .header__link:hover {
+            color: $white;
+        }
+        .header__logo {
+            fill: white;
+            filter: invert(100%); 
+        }
+        .header__btn_lang {
+            background: black;
+        }
     }
     &__nav {
         display: flex;
@@ -26,8 +55,7 @@
     }
     &__logo {
         width: 96px;
-        filter: invert(100%); 
-        fill: $white;
+        // filter: invert(100%); 
     }
     &__items {
         display: flex;
@@ -41,11 +69,11 @@
         font-family: $font;
         font-size: 14px;
         padding: 10px 16px;
-        color: $gray;
+        // color: $gray;
     }
-    &__link:hover {
-        color: $white;
-    }
+    // &__link:hover {
+    //     color: $white;
+    // }
     &__btns {
         display: flex;
         align-items: end;

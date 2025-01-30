@@ -1,0 +1,86 @@
+@use "../styles/variables.scss" as *;
+@use "../styles/mixins.scss" as *;
+
+.list_icons {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0px auto;
+    &__title {
+        font-family: $font;
+        font-size: 36px;
+        color: $white;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include white-text;
+        margin: 20px auto 80px;
+        max-width: 870px;
+        line-height: 150%;
+    }
+    &__items {
+        max-width: 1100px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 8rem;
+        row-gap: 6rem;
+    }
+    &__item {
+        text-align: center;
+        &_img {
+            width: 40px;
+            height: 40px;
+        }
+        &_text {
+            font-family: $font;
+            font-size: 16px;
+            color: $white;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+.list_cards {background: $white;
+    &__items {
+        position: relative;
+        bottom: 100px;
+        max-width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    &__title {
+        font-family: $font;
+        font-size: 30px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        background: #000;
+        padding: 90px 0px 140px;
+    }
+}
+.list_img {
+    padding: 40px 20px;
+    background: $white;
+    &__title {
+        font-family: $font;
+        font-size: 30px;
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+    &__items {
+        max-width: 1180px;
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    &__item img {
+        width: 100%;
+    }
+}
