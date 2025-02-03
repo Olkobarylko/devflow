@@ -1,0 +1,72 @@
+@use "../../styles/variables.scss" as *;
+
+.article_card {
+    display: inline-block;
+    border-radius: 8px;
+    transition: all 0.15s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &__img_container {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    &__vector {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        filter: invert(100%);
+        fill: $white;
+        transition: all 0.15s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    &__text_container {
+        padding: 32px;
+    }
+
+    &__title {
+        font-family: $font;
+        font-size: 20px;
+        color: black;
+        line-height: 25px;
+        font-weight: 600;
+    }
+
+    &__content {
+        font-family: $font;
+        font-size: 16px;
+        color: black;
+        line-height: 22px;
+        font-weight: 400;
+        margin: 15px 0px;
+    }
+
+    &__btn {
+        display: inline-block;
+        font-family: $font;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $white;
+        background: #1f2937;
+        padding: 10px 16px;
+        border-radius: 50px;
+    }
+    &:hover {
+        background: black;
+    }
+    &:hover .article_card__title {
+        color: white;
+    }
+    &:hover .article_card__content {
+        color: white;
+    }
+    &:hover .article_card__vector {
+        filter: invert(0%);
+    }
+}
+

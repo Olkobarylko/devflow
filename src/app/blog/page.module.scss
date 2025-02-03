@@ -1,0 +1,47 @@
+@use "../styles/variables.scss" as *;
+@use "../styles/mixins.scss" as *;
+
+.list_articles {
+    background: $white;
+    &__container {
+        max-width: 1280px;
+        margin: 0px auto;
+        padding: 32px;
+    }
+
+    &__title {
+        font-family: $font;
+        font-size: 36px;
+        color: black;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        max-width: 900px;
+        margin: 0px auto 56px;
+        @include white-text;
+        color: black;
+        line-height: 25px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'tablet')) {
+    .list_articles__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'mobile')) {
+    .list_articles__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

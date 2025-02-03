@@ -1,16 +1,16 @@
 import styles from "./page.module.scss";
 import WorkCard from "../components/WorkCard/WorkCard";
 import Card from "../components/Card/Card";
-import local from "../../../public/images/local.avif";
-import boichuk from "../../../public/images/boichuk.avif";
-import karpaty from "../../../public/images/karpaty.avif";
-import granocielo from "../../../public/images/granocielo.avif";
-import game from "../../../public/images/game.avif";
-import karpaty_shop from "../../../public/images/karpaty-shop.avif";
-import damo_radu from "../../../public/images/damo-radu.avif";
-import shyly_karpat from "../../../public/images/shyly-karpat.avif";
-import nad_levom from "../../../public/images/nad-levom.avif";
-import olyvka from "../../../public/images/olyvka.avif";
+import local from "../../../public/images/local.png";
+import boichuk from "../../../public/images/boichuk.png";
+import karpaty from "../../../public/images/karpaty.png";
+import granocielo from "../../../public/images/granocielo.png";
+import game from "../../../public/images/game.png";
+import karpaty_shop from "../../../public/images/karpaty-shop.png";
+import damo_radu from "../../../public/images/damo-radu.png";
+import shyly_karpat from "../../../public/images/shyly-karpat.png";
+import nad_levom from "../../../public/images/nad-levom.png";
+import olyvka from "../../../public/images/olyvka.png";
 
 export default function Portfolio() {
   return (

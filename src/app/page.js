@@ -13,7 +13,7 @@ import classNames from "classnames";
 import WorkCard from "./components/WorkCard/WorkCard";
 import boichuk from "../../public/images/boichuk.png";
 import fckarpaty from "../../public/images/karpaty.png";
-import local_img from "../../public/images/local-img.png";
+import local_img from "../../public/images/local.png";
 import React, { useEffect } from "react";
 
 export default function Home() {
