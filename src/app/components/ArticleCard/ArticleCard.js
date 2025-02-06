@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import styles from "./ArticleCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,9 +21,9 @@ export default function ArticleCard({title, img, content}) {
         <p className={styles.article_card__content}>
           {content}
         </p>
-        <Link href="/" className={styles.article_card__btn}>
+        <span className={styles.article_card__btn}>
           Детальніше
-        </Link>
+        </span>
       </div>
     </Link>
   );

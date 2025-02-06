@@ -44,7 +44,7 @@ export default function Header() {
               </Link>
             </li>
             <li className={styles.header__item}>
-              <Link className={styles.header__link} href="/">
+              <Link className={styles.header__link} href="/contact">
                 Контакти
               </Link>
             </li>
